@@ -1,3 +1,215 @@
-[00:00:32.653] Server  LOG      ✓ Ready in 18.9s
-[00:00:38.568] Server  LOG      ○ Compiling /_not-found/page ...
-[00:01:02.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.234] Server  LOG      ✓ Ready in 7.9s
+[00:00:15.149] Server  LOG      ○ Compiling / ...
+[00:00:39.367] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:39.601] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:09.244] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:09.650] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:09.650] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:09.650] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:11.740] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:31.270] Server  LOG      ○ Compiling /payslips ...
+[00:07:20.114] Server  LOG      ✓ Compiled in 178ms
+[00:07:20.117] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:20.714] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:21.592] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:21:25.808] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:25:29.464] Server  LOG      ✓ Compiled in 344ms
+[00:25:34.922] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:35.095] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:25:35.095] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:46:26.071] Server  LOG      ✓ Compiled in 193ms
+[00:50:41.068] Server  LOG      ✓ Compiled in 133ms
+[00:56:49.760] Server  LOG      ✓ Compiled in 127ms
+[01:01:12.334] Server  LOG      ✓ Compiled in 186ms
+[01:01:12.343] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:01:12.826] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:01:13.718] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:01:22.116] Server  LOG      ✓ Compiled in 190ms
+[01:01:24.854] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:01:31.417] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/sample-receipt.png" "received" null
+[01:02:41.230] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/sample-receipt.png" "received" null
+[01:08:17.652] Server  LOG      ✓ Compiled in 159ms
+[01:38:19.183] Server  LOG      ✓ Compiled in 273ms
+[01:41:32.848] Server  LOG      ✓ Compiled in 146ms
+[01:41:39.487] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/sample-receipt.png" "received" null
+[01:52:26.779] Server  LOG      ✓ Compiled in 135ms
+[01:58:50.556] Server  LOG      ✓ Compiled in 241ms
+[01:59:09.156] Server  LOG      ✓ Compiled in 115ms
+[01:59:12.113] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:59:12.275] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:59:12.275] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:03:50.693] Server  LOG      ✓ Compiled in 106ms
+[02:03:56.072] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:03:56.315] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:03:56.315] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:04:12.790] Server  LOG      ✓ Compiled in 259ms
+[02:05:36.598] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/app/(admin)/(others-pages)/travel-expenses/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:05:36.736] Server  LOG      ✓ Compiled in 130ms
+[02:05:37.096] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:37.947] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:05:38.444] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:07:45.394] Server  LOG      ✓ Compiled in 105ms
+[02:08:37.323] Server  LOG      ✓ Compiled in 104ms
+[02:10:36.863] Server  LOG      ✓ Compiled in 441ms
+[02:10:50.913] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:10:51.071] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:10:51.071] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:11:48.994] Server  LOG      ✓ Compiled in 168ms
+[02:12:20.190] Server  LOG      ✓ Compiled in 113ms
+[02:12:34.029] Server  LOG      ✓ Compiled in 93ms
+[02:12:48.396] Server  LOG      ✓ Compiled in 149ms
+[02:13:17.314] Server  LOG      ✓ Compiled in 107ms
+[02:13:57.367] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[02:14:25.554] Server  LOG      ✓ Compiled in 88ms
+[02:14:28.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:28.274] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:28.274] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:28.274] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:28.274] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:14:30.353] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:30.353] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:30.353] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:30.353] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:33.093] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:34.697] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:34.697] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:34.697] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:14:34.697] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:15:04.363] Server  LOG      ✓ Compiled in 245ms
+[02:15:04.811] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:15:04.811] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:15:04.811] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:15:04.811] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 2
+[02:15:06.652] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:15:06.813] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:15:19.792] Server  LOG      ✓ Compiled in 109ms
+[02:15:23.008] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:15:23.174] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:18:28.547] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[02:18:33.617] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[02:21:36.633] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[02:21:50.941] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:21:51.064] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:21:51.064] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:21:51.064] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:21:53.206] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:21:57.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:21:57.517] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:21:57.517] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:21:57.517] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:21:59.006] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:37:58.138] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:37:58.306] Server  LOG      ✓ Compiled in 210ms
+[02:37:58.998] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:37:59.890] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:38:06.188] Server  LOG      ✓ Compiled in 121ms
+[02:41:59.431] Server  LOG      ✓ Compiled in 203ms
+[04:00:53.824] Server  LOG      ✓ Compiled in 1679ms
+[04:02:24.213] Server  LOG      ✓ Compiled in 258ms
+[04:02:30.177] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:02:30.345] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[04:02:30.345] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[04:13:24.329] Server  LOG      ✓ Compiled in 746ms
+[04:14:55.651] Server  LOG      ✓ Compiled in 96ms
+[04:15:00.893] Server  LOG      ✓ Compiled in 102ms
+[04:25:56.357] Server  LOG      ✓ Compiled in 254ms
+[04:46:34.659] Server  LOG      ✓ Compiled in 266ms
+[04:46:40.416] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:46:40.681] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[04:46:40.681] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[04:51:52.368] Server  LOG      ✓ Compiled in 262ms
+[04:51:53.013] Browser ERROR   ./src/app/(admin)/(others-pages)/helpdesk/page.tsx:1:26
+Ecmascript file had an error
+> 1 | import React, { useMemo, useState } from "react";
+    |                          ^^^^^^^^
+  2 |
+  3 | /* ===================== TYPES ===================== */
+  4 |
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[04:51:59.006] Browser ERROR   ./src/app/(admin)/(others-pages)/helpdesk/page.tsx:1:26
+Ecmascript file had an error
+> 1 | import React, { useMemo, useState } from "react";
+    |                          ^^^^^^^^
+  2 |
+  3 | /* ===================== TYPES ===================== */
+  4 |
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[04:52:08.144] Browser ERROR   ./src/app/(admin)/(others-pages)/helpdesk/page.tsx:1:26
+Ecmascript file had an error
+> 1 | import React, { useMemo, useState } from "react";
+    |                          ^^^^^^^^
+  2 |
+  3 | /* ===================== TYPES ===================== */
+  4 |
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[04:52:22.955] Server  LOG      ✓ Compiled in 0ms
+[04:52:23.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:52:23.572] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[04:52:23.691] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:03:50.173] Server  LOG      ✓ Compiled in 372ms
+[05:04:17.644] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./src/app/(admin)/(others-pages)/helpdesk/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[05:04:17.764] Server  LOG      ✓ Compiled in 119ms
+[05:04:18.029] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:04:18.948] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:04:23.987] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:04:25.978] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:04:26.132] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:04:26.132] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:11:53.374] Server  LOG      ✓ Compiled in 277ms
+[05:11:59.927] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:12:00.085] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:12:00.086] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:16:54.924] Server  LOG      ✓ Compiled in 368ms
+[05:21:31.575] Server  LOG      ✓ Compiled in 259ms
+[05:21:42.838] Server  LOG      ✓ Compiled in 143ms
+[05:29:40.026] Server  LOG      ✓ Compiled in 461ms
+[05:30:41.793] Server  LOG      ✓ Compiled in 322ms
+[05:37:17.494] Server  LOG      ✓ Compiled in 296ms
+[05:44:00.726] Server  LOG      ✓ Compiled in 306ms
+[05:44:16.384] Server  LOG      ✓ Compiled in 150ms
+[05:45:42.953] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:45:57.229] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:50:53.563] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:50:53.772] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:50:53.772] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:52:17.171] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:52:18.265] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:52:31.307] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:52:36.558] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/images/party.jpg" "received" null
+[05:52:50.910] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:52:51.054] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:52:51.054] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:52:51.054] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[05:52:53.061] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[05:56:00.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:02:09.984] Server  LOG      ✓ Compiled in 2.3s
+[06:06:42.066] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:06:58.416] Server  LOG      ✓ Compiled in 347ms
+[06:08:20.512] Server  LOG      ✓ Compiled in 95ms

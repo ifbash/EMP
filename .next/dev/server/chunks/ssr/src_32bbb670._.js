@@ -10,86 +10,91 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 ;
 ;
-const PageBreadcrumb = ({ pageTitle })=>{
+const PageBreadcrumb = ({ pageTitle, items })=>{
+    const breadcrumbItems = items && items.length > 0 ? items : [
+        {
+            label: "Home",
+            href: "/"
+        },
+        {
+            label: pageTitle
+        }
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex flex-wrap items-center justify-between gap-3 mb-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "text-xl font-semibold text-gray-800 dark:text-white/90",
-                "x-text": "pageName",
                 children: pageTitle
             }, void 0, false, {
                 fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                lineNumber: 11,
+                lineNumber: 29,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
-                    className: "flex items-center gap-1.5",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                className: "inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400",
-                                href: "/",
-                                children: [
-                                    "Home",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        className: "stroke-current",
-                                        width: "17",
-                                        height: "16",
-                                        viewBox: "0 0 17 16",
-                                        fill: "none",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            d: "M6.0765 12.667L10.2432 8.50033L6.0765 4.33366",
-                                            stroke: "",
-                                            strokeWidth: "1.2",
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                                            lineNumber: 33,
-                                            columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0))
+                    className: "flex items-center gap-1.5 text-sm",
+                    children: breadcrumbItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            className: "flex items-center gap-1.5",
+                            children: [
+                                item.href ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: item.href,
+                                    className: "text-gray-500 hover:text-blue-600 dark:text-gray-400",
+                                    children: item.label
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
+                                    lineNumber: 39,
+                                    columnNumber: 17
+                                }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-gray-800 dark:text-white/90 font-medium",
+                                    children: item.label
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
+                                    lineNumber: 46,
+                                    columnNumber: 17
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                index < breadcrumbItems.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "stroke-current text-gray-400",
+                                    width: "17",
+                                    height: "16",
+                                    viewBox: "0 0 17 16",
+                                    fill: "none",
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M6.0765 12.667L10.2432 8.50033L6.0765 4.33366",
+                                        strokeWidth: "1.2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                                        lineNumber: 25,
-                                        columnNumber: 15
+                                        lineNumber: 60,
+                                        columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, ("TURBOPACK compile-time value", void 0))
-                        }, void 0, false, {
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
+                                    lineNumber: 52,
+                                    columnNumber: 17
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, index, true, {
                             fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            className: "text-sm text-gray-800 dark:text-white/90",
-                            children: pageTitle
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                            lineNumber: 43,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
+                            lineNumber: 37,
+                            columnNumber: 13
+                        }, ("TURBOPACK compile-time value", void 0)))
+                }, void 0, false, {
                     fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                    lineNumber: 18,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-                lineNumber: 17,
+                lineNumber: 34,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/common/PageBreadCrumb.tsx",
-        lineNumber: 10,
+        lineNumber: 27,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

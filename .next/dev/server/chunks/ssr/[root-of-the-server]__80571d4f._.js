@@ -3266,809 +3266,369 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$common$2f$PageBreadCrumb$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/common/PageBreadCrumb.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/modal/index.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/table/index.tsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$BarChart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/chart/BarChart.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/Bar.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/XAxis.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/YAxis.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$CartesianGrid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/cartesian/CartesianGrid.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/Tooltip.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/recharts/es6/component/ResponsiveContainer.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2d$line$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Edit3$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/pen-line.js [app-ssr] (ecmascript) <export default as Edit3>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$common$2f$PageBreadCrumb$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/common/PageBreadCrumb.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-ssr] (ecmascript) <export default as ChevronLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-ssr] (ecmascript) <export default as ChevronRight>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/plus.js [app-ssr] (ecmascript) <export default as Plus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-ssr] (ecmascript) <export default as Trash2>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-ssr] (ecmascript) <export default as CheckCircle>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__XCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-x.js [app-ssr] (ecmascript) <export default as XCircle>");
 "use client";
 ;
 ;
 ;
 ;
 ;
-;
-;
-const initialTimesheets = [
-    {
-        id: 1,
-        date: "2025-12-25",
-        regularHours: 8,
-        overtimeHours: 2,
-        notes: "Worked on project X",
-        status: "Pending"
-    },
-    {
-        id: 2,
-        date: "2025-12-26",
-        regularHours: 7,
-        overtimeHours: 1,
-        notes: "",
-        status: "Pending"
-    },
-    {
-        id: 3,
-        date: "2025-12-27",
-        regularHours: 8,
-        overtimeHours: 0,
-        notes: "",
-        status: "Approved"
-    },
-    {
-        id: 4,
-        date: "2025-12-28",
-        regularHours: 6,
-        overtimeHours: 3,
-        notes: "Urgent task",
-        status: "Pending"
-    },
-    {
-        id: 5,
-        date: "2025-12-29",
-        regularHours: 8,
-        overtimeHours: 1,
-        notes: "",
-        status: "Rejected"
-    }
+/* ---------------- MOCK DATA ---------------- */ const projects = [
+    "None",
+    "Project Alpha",
+    "Project Beta",
+    "Internal Tool"
 ];
+const today = new Date();
+/* ---------------- HELPERS ---------------- */ const startOfWeek = (date)=>{
+    const d = new Date(date);
+    d.setDate(d.getDate() - d.getDay());
+    d.setHours(0, 0, 0, 0);
+    return d;
+};
+const formatDate = (d)=>d.toISOString().split("T")[0];
+const addDays = (d, days)=>{
+    const nd = new Date(d);
+    nd.setDate(nd.getDate() + days);
+    return nd;
+};
 function TimesheetPage() {
-    const [timesheets, setTimesheets] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialTimesheets);
-    const [modalOpen, setModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [editingTimesheet, setEditingTimesheet] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [date, setDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const [regularHours, setRegularHours] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(8);
-    const [overtimeHours, setOvertimeHours] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [notes, setNotes] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const [currentPage, setCurrentPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    const timesheetsPerPage = 5;
-    // Pagination
-    const totalPages = Math.ceil(timesheets.length / timesheetsPerPage);
-    const displayedTimesheets = timesheets.slice((currentPage - 1) * timesheetsPerPage, currentPage * timesheetsPerPage);
-    // Chart data
-    const chartData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
-        const weekDays = [
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
-        ];
-        return weekDays.map((day, idx)=>{
-            const ts = timesheets.find((t)=>new Date(t.date).getDay() === idx);
+    const [weekStart, setWeekStart] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(startOfWeek(today));
+    const [timesheet, setTimesheet] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        weekStart: formatDate(startOfWeek(today)),
+        status: "DRAFT",
+        entries: {}
+    });
+    const [selectedDate, setSelectedDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const isEditable = timesheet.status === "DRAFT";
+    const isFutureWeek = weekStart > startOfWeek(today);
+    /* ---------------- WEEK DAYS ---------------- */ const days = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        return Array.from({
+            length: 7
+        }).map((_, i)=>{
+            const d = addDays(weekStart, i);
             return {
-                day,
-                regular: ts ? ts.regularHours : 0,
-                overtime: ts ? ts.overtimeHours : 0
+                label: d.toLocaleDateString("en-US", {
+                    weekday: "short"
+                }),
+                date: formatDate(d),
+                day: d.getDate()
             };
         });
     }, [
-        timesheets
+        weekStart
     ]);
-    const totalHours = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>timesheets.reduce((sum, t)=>sum + t.regularHours + t.overtimeHours, 0), [
-        timesheets
-    ]);
-    const averageHours = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>timesheets.length ? totalHours / timesheets.length : 0, [
-        totalHours,
-        timesheets.length
-    ]);
-    // Modal functions
-    const openModalForNew = ()=>{
-        setEditingTimesheet(null);
-        setDate("");
-        setRegularHours(8);
-        setOvertimeHours(0);
-        setNotes("");
-        setModalOpen(true);
+    /* ---------------- ENTRY ACTIONS ---------------- */ const addEntry = (date)=>{
+        if (!isEditable) return;
+        setTimesheet((prev)=>({
+                ...prev,
+                entries: {
+                    ...prev.entries,
+                    [date]: [
+                        ...prev.entries[date] || [],
+                        {
+                            id: crypto.randomUUID(),
+                            project: "None",
+                            type: "WORK",
+                            hours: 8,
+                            notes: ""
+                        }
+                    ]
+                }
+            }));
     };
-    const openModalForEdit = (t)=>{
-        setEditingTimesheet(t);
-        setDate(t.date);
-        setRegularHours(t.regularHours);
-        setOvertimeHours(t.overtimeHours);
-        setNotes(t.notes);
-        setModalOpen(true);
+    const updateEntry = (date, id, field, value)=>{
+        setTimesheet((prev)=>({
+                ...prev,
+                entries: {
+                    ...prev.entries,
+                    [date]: prev.entries[date].map((e)=>e.id === id ? {
+                            ...e,
+                            [field]: value
+                        } : e)
+                }
+            }));
     };
-    const closeModal = ()=>setModalOpen(false);
-    const handleSaveTimesheet = ()=>{
-        if (!date) return;
-        if (editingTimesheet) {
-            setTimesheets(timesheets.map((t)=>t.id === editingTimesheet.id ? {
-                    ...t,
-                    date,
-                    regularHours,
-                    overtimeHours,
-                    notes
-                } : t));
-        } else {
-            const newTimesheet = {
-                id: timesheets.length + 1,
-                date,
-                regularHours,
-                overtimeHours,
-                notes,
-                status: "Pending"
-            };
-            setTimesheets([
-                newTimesheet,
-                ...timesheets
-            ]);
-        }
-        setModalOpen(false);
+    const deleteEntry = (date, id)=>{
+        setTimesheet((prev)=>({
+                ...prev,
+                entries: {
+                    ...prev.entries,
+                    [date]: prev.entries[date].filter((e)=>e.id !== id)
+                }
+            }));
     };
-    const handleDelete = (id)=>setTimesheets(timesheets.filter((t)=>t.id !== id));
-    const toggleSelect = (id)=>{
-        setTimesheets(timesheets.map((t)=>t.id === id ? {
-                ...t,
-                selected: !t.selected
-            } : t));
+    /* ---------------- SUBMIT ---------------- */ const submitWeek = ()=>{
+        if (isFutureWeek || !isEditable) return;
+        setTimesheet((prev)=>({
+                ...prev,
+                status: "SUBMITTED"
+            }));
     };
-    const bulkApproveReject = (action)=>{
-        setTimesheets(timesheets.map((t)=>t.selected ? {
-                ...t,
-                status: action,
-                selected: false
-            } : t));
+    /* ---------------- NAVIGATION ---------------- */ const changeWeek = (dir)=>{
+        const newWeek = addDays(weekStart, dir * 7);
+        setWeekStart(newWeek);
+        setTimesheet({
+            weekStart: formatDate(newWeek),
+            status: "DRAFT",
+            entries: {}
+        });
     };
-    const handleApproveReject = (id, action)=>{
-        setTimesheets(timesheets.map((t)=>t.id === id ? {
-                ...t,
-                status: action
-            } : t));
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    /* ---------------- UI ---------------- */ return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "p-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$common$2f$PageBreadCrumb$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 pageTitle: "Timesheet"
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 116,
+                lineNumber: 152,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-between mb-4",
+                className: "flex justify-between items-center mb-4",
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `px-4 py-1 rounded-full text-sm font-medium ${timesheet.status === "DRAFT" ? "bg-gray-200" : timesheet.status === "SUBMITTED" ? "bg-blue-200" : timesheet.status === "APPROVED" ? "bg-green-200" : "bg-red-200"}`,
+                        children: timesheet.status
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                        lineNumber: 156,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        disabled: !isEditable || isFutureWeek,
+                        onClick: submitWeek,
+                        className: "bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-40",
+                        children: "Submit Week"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                        lineNumber: 169,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                lineNumber: 155,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-between mb-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
+                        onClick: ()=>changeWeek(-1),
+                        className: "cursor-pointer"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                        lineNumber: 180,
+                        columnNumber: 17
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-xl font-semibold"
-                    }, void 0, false, {
+                        className: "font-semibold",
+                        children: [
+                            "Week of ",
+                            weekStart.toDateString()
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 119,
+                        lineNumber: 181,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700",
-                        onClick: openModalForNew,
-                        children: "New Timesheet"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                        onClick: ()=>!isFutureWeek && changeWeek(1),
+                        className: `cursor-pointer ${isFutureWeek ? "opacity-30" : ""}`
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 120,
+                        lineNumber: 184,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 118,
+                lineNumber: 179,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-6 grid grid-cols-1 sm:grid-cols-2 gap-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-4 border rounded-xl bg-white shadow",
+                className: "grid grid-cols-7 border rounded-lg overflow-hidden",
+                children: days.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        onClick: ()=>isEditable && setSelectedDate(d.date),
+                        className: "h-32 border p-2 cursor-pointer hover:bg-gray-50",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-sm font-medium text-gray-500",
-                                children: "Average Hours/Day"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 131,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-2xl font-bold",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "font-medium text-sm mb-1",
                                 children: [
-                                    averageHours.toFixed(2),
-                                    " hrs"
+                                    d.label,
+                                    " ",
+                                    d.day
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 132,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 130,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "p-4 border rounded-xl bg-white shadow",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-sm font-medium text-gray-500",
-                                children: "Total Overtime"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 135,
-                                columnNumber: 21
+                                lineNumber: 199,
+                                columnNumber: 25
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-2xl font-bold",
-                                children: [
-                                    timesheets.reduce((sum, t)=>sum + t.overtimeHours, 0),
-                                    " hrs"
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 136,
-                                columnNumber: 21
-                            }, this)
+                            (timesheet.entries[d.date] || []).map((e)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `text-xs px-2 py-1 rounded mb-1 ${e.type === "WORK" ? "bg-blue-100" : e.type === "LEAVE" ? "bg-yellow-100" : "bg-purple-100"}`,
+                                    children: [
+                                        e.project,
+                                        " (",
+                                        e.type,
+                                        ")"
+                                    ]
+                                }, e.id, true, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                    lineNumber: 204,
+                                    columnNumber: 29
+                                }, this))
                         ]
-                    }, void 0, true, {
+                    }, d.date, true, {
                         fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 134,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
+                        lineNumber: 194,
+                        columnNumber: 21
+                    }, this))
+            }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 129,
+                lineNumber: 192,
                 columnNumber: 13
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-6 p-4 border rounded-xl bg-white shadow h-64",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-lg font-semibold mb-2 text-gray-800 dark:text-white",
-                        children: "This Week Hours"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 142,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ResponsiveContainer"], {
-                        width: "100%",
-                        height: "100%",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$BarChart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BarChart"], {
-                            data: chartData,
-                            margin: {
-                                top: 20,
-                                right: 30,
-                                left: 0,
-                                bottom: 5
-                            },
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$CartesianGrid$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CartesianGrid"], {
-                                    strokeDasharray: "3 3"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 145,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["XAxis"], {
-                                    dataKey: "day"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 146,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["YAxis"], {}, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 147,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Tooltip"], {}, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 148,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Bar"], {
-                                    dataKey: "regular",
-                                    stackId: "a",
-                                    fill: "#3b82f6"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 149,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Bar"], {
-                                    dataKey: "overtime",
-                                    stackId: "a",
-                                    fill: "#f97316"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 150,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Modal"], {
+                isOpen: !!selectedDate,
+                onClose: ()=>setSelectedDate(null),
+                className: "max-w-lg p-6",
+                children: selectedDate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                            className: "font-semibold mb-3",
+                            children: selectedDate
+                        }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                            lineNumber: 144,
-                            columnNumber: 21
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 143,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 141,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-2 flex gap-2",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700",
-                        onClick: ()=>bulkApproveReject("Approved"),
-                        children: "Approve Selected"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 157,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700",
-                        onClick: ()=>bulkApproveReject("Rejected"),
-                        children: "Reject Selected"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 158,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 156,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "overflow-hidden rounded-xl border border-gray-200 bg-white p-6",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "max-w-full overflow-x-auto",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Table"], {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableHeader"], {
-                                    className: "bg-gray-50 dark:bg-gray-800",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableRow"], {
+                            lineNumber: 228,
+                            columnNumber: 25
+                        }, this),
+                        (timesheet.entries[selectedDate] || []).map((e)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "border rounded p-3 mb-3 space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                        value: e.project,
+                                        disabled: !isEditable,
+                                        onChange: (ev)=>updateEntry(selectedDate, e.id, "project", ev.target.value),
+                                        className: "w-full border rounded px-2 py-1",
+                                        children: projects.map((p)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                children: p
+                                            }, p, false, {
+                                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                                lineNumber: 241,
+                                                columnNumber: 41
+                                            }, this))
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                        lineNumber: 232,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                        value: e.type,
+                                        disabled: !isEditable,
+                                        onChange: (ev)=>updateEntry(selectedDate, e.id, "type", ev.target.value),
+                                        className: "w-full border rounded px-2 py-1",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                    type: "checkbox",
-                                                    onChange: (e)=>setTimesheets(timesheets.map((t)=>({
-                                                                ...t,
-                                                                selected: e.target.checked
-                                                            })))
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 168,
-                                                    columnNumber: 37
-                                                }, this)
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "WORK",
+                                                children: "Working"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 167,
-                                                columnNumber: 33
+                                                lineNumber: 253,
+                                                columnNumber: 37
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                children: "Date"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "LEAVE",
+                                                children: "Leave"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 170,
-                                                columnNumber: 33
+                                                lineNumber: 254,
+                                                columnNumber: 37
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                className: "text-right",
-                                                children: "Regular Hours"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "HOLIDAY",
+                                                children: "Holiday"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 171,
-                                                columnNumber: 33
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                className: "text-right",
-                                                children: "Overtime Hours"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 172,
-                                                columnNumber: 33
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                children: "Notes"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 173,
-                                                columnNumber: 33
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                children: "Status"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 174,
-                                                columnNumber: 33
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                isHeader: true,
-                                                children: "Actions"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                lineNumber: 175,
-                                                columnNumber: 33
+                                                lineNumber: 255,
+                                                columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 166,
-                                        columnNumber: 29
+                                        lineNumber: 245,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        type: "number",
+                                        value: e.type === "WORK" ? e.hours : 0,
+                                        disabled: !isEditable || e.type !== "WORK",
+                                        onChange: (ev)=>updateEntry(selectedDate, e.id, "hours", Number(ev.target.value)),
+                                        className: "w-full border rounded px-2 py-1"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                        lineNumber: 258,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        value: e.notes,
+                                        disabled: !isEditable,
+                                        onChange: (ev)=>updateEntry(selectedDate, e.id, "notes", ev.target.value),
+                                        placeholder: "Notes",
+                                        className: "w-full border rounded px-2 py-1"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                        lineNumber: 273,
+                                        columnNumber: 33
+                                    }, this),
+                                    isEditable && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                        className: "text-red-600 cursor-pointer",
+                                        onClick: ()=>deleteEntry(selectedDate, e.id)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                        lineNumber: 284,
+                                        columnNumber: 37
                                     }, this)
+                                ]
+                            }, e.id, true, {
+                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
+                                lineNumber: 231,
+                                columnNumber: 29
+                            }, this)),
+                        isEditable && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: ()=>addEntry(selectedDate),
+                            className: "flex items-center gap-2 text-blue-600",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
+                                    size: 16
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 165,
-                                    columnNumber: 25
+                                    lineNumber: 297,
+                                    columnNumber: 33
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableBody"], {
-                                    className: "divide-y divide-gray-100 dark:divide-white/[0.05]",
-                                    children: displayedTimesheets.map((t)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableRow"], {
-                                            className: t.status === "Approved" ? "bg-green-50" : t.status === "Rejected" ? "bg-red-50" : "bg-white",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                                        type: "checkbox",
-                                                        checked: !!t.selected,
-                                                        onChange: ()=>toggleSelect(t.id)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                        lineNumber: 182,
-                                                        columnNumber: 41
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 181,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    children: t.date
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 184,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    className: "text-right",
-                                                    children: t.regularHours
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 185,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    className: "text-right",
-                                                    children: t.overtimeHours
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 186,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    children: t.notes
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 187,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    children: t.status
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 188,
-                                                    columnNumber: 37
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$table$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TableCell"], {
-                                                    className: "flex justify-center gap-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2d$line$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Edit3$3e$__["Edit3"], {
-                                                            className: "cursor-pointer text-blue-600",
-                                                            onClick: ()=>openModalForEdit(t)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                            lineNumber: 190,
-                                                            columnNumber: 41
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                                            className: "cursor-pointer text-red-600",
-                                                            onClick: ()=>handleDelete(t.id)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                            lineNumber: 191,
-                                                            columnNumber: 41
-                                                        }, this),
-                                                        t.status === "Pending" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                                                    className: "cursor-pointer text-green-600",
-                                                                    onClick: ()=>handleApproveReject(t.id, "Approved")
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                                    lineNumber: 194,
-                                                                    columnNumber: 49
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__XCircle$3e$__["XCircle"], {
-                                                                    className: "cursor-pointer text-red-600",
-                                                                    onClick: ()=>handleApproveReject(t.id, "Rejected")
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                                    lineNumber: 195,
-                                                                    columnNumber: 49
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                                    lineNumber: 189,
-                                                    columnNumber: 37
-                                                }, this)
-                                            ]
-                                        }, t.id, true, {
-                                            fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                            lineNumber: 180,
-                                            columnNumber: 33
-                                        }, this))
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 178,
-                                    columnNumber: 25
-                                }, this)
+                                " Add Entry"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                            lineNumber: 164,
-                            columnNumber: 21
+                            lineNumber: 293,
+                            columnNumber: 29
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 163,
-                        columnNumber: 17
-                    }, this),
-                    totalPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "mt-4 flex justify-center gap-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setCurrentPage(Math.max(currentPage - 1, 1)),
-                                className: "px-3 py-1 border rounded",
-                                disabled: currentPage === 1,
-                                children: "Prev"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 208,
-                                columnNumber: 25
-                            }, this),
-                            [
-                                ...Array(totalPages)
-                            ].map((_, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>setCurrentPage(idx + 1),
-                                    className: `px-3 py-1 border rounded ${currentPage === idx + 1 ? "bg-blue-600 text-white" : ""}`,
-                                    children: idx + 1
-                                }, idx, false, {
-                                    fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                    lineNumber: 210,
-                                    columnNumber: 29
-                                }, this)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setCurrentPage(Math.min(currentPage + 1, totalPages)),
-                                className: "px-3 py-1 border rounded",
-                                disabled: currentPage === totalPages,
-                                children: "Next"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 212,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 207,
-                        columnNumber: 21
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true)
+            }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 162,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Modal"], {
-                isOpen: modalOpen,
-                onClose: closeModal,
-                className: "max-w-md p-6",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-lg font-semibold mb-4",
-                        children: editingTimesheet ? "Edit Timesheet" : "New Timesheet"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 219,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-4",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium mb-1",
-                                        children: "Date"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 222,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "date",
-                                        className: "w-full border rounded px-3 py-2",
-                                        value: date,
-                                        onChange: (e)=>setDate(e.target.value)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 223,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 221,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium mb-1",
-                                        children: "Regular Hours"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 226,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "number",
-                                        className: "w-full border rounded px-3 py-2",
-                                        value: regularHours,
-                                        onChange: (e)=>setRegularHours(Number(e.target.value))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 227,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 225,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium mb-1",
-                                        children: "Overtime Hours"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 230,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "number",
-                                        className: "w-full border rounded px-3 py-2",
-                                        value: overtimeHours,
-                                        onChange: (e)=>setOvertimeHours(Number(e.target.value))
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 231,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 229,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium mb-1",
-                                        children: "Notes"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 234,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "text",
-                                        className: "w-full border rounded px-3 py-2",
-                                        value: notes,
-                                        onChange: (e)=>setNotes(e.target.value),
-                                        placeholder: "Enter notes or task details"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 235,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 233,
-                                columnNumber: 21
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex justify-end gap-2",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "px-4 py-2 bg-gray-300 rounded hover:bg-gray-400",
-                                        onClick: closeModal,
-                                        children: "Cancel"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 238,
-                                        columnNumber: 25
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700",
-                                        onClick: handleSaveTimesheet,
-                                        children: editingTimesheet ? "Update" : "Add"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                        lineNumber: 239,
-                                        columnNumber: 25
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                                lineNumber: 237,
-                                columnNumber: 21
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                        lineNumber: 220,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-                lineNumber: 218,
+                lineNumber: 221,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin)/(others-pages)/timesheet/page.tsx",
-        lineNumber: 115,
+        lineNumber: 151,
         columnNumber: 9
     }, this);
 }

@@ -150,7 +150,8 @@ const navItems: NavItem[] = [
     name: "Payroll & Expense",
     subItems: [
       { name: "Payslips", path: "/payslips" },
-      { name: "Reimbursements", path: "/reimbursements" },
+      // { name: "Reimbursements", path: "/reimbursements" },
+      { name: "Travel & Reimbursement Expenses", path: "/travel-expenses" },
     ],
   },
   {
@@ -162,7 +163,7 @@ const navItems: NavItem[] = [
     icon: <ChatIcon />,
     name: "Support & Engagement",
     subItems: [
-      { name: "Help Desk", path: "/help-desk" },
+      { name: "Help Desk", path: "/helpdesk" },
       { name: "Appreciate", path: "/appreciate" },
       { name: "Announcements", path: "/announcements" },
     ],

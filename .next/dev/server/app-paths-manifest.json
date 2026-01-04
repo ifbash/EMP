@@ -1,5 +1,16 @@
 {
+  "/(admin)/(others-pages)/admin/page": "app/(admin)/(others-pages)/admin/page.js",
+  "/(admin)/(others-pages)/announcements/page": "app/(admin)/(others-pages)/announcements/page.js",
+  "/(admin)/(others-pages)/benefits/page": "app/(admin)/(others-pages)/benefits/page.js",
   "/(admin)/(others-pages)/employee-hub/page": "app/(admin)/(others-pages)/employee-hub/page.js",
+  "/(admin)/(others-pages)/helpdesk/[id]/page": "app/(admin)/(others-pages)/helpdesk/[id]/page.js",
+  "/(admin)/(others-pages)/helpdesk/page": "app/(admin)/(others-pages)/helpdesk/page.js",
+  "/(admin)/(others-pages)/hr-policies/page": "app/(admin)/(others-pages)/hr-policies/page.js",
+  "/(admin)/(others-pages)/leave-calendar/page": "app/(admin)/(others-pages)/leave-calendar/page.js",
+  "/(admin)/(others-pages)/payslips/page": "app/(admin)/(others-pages)/payslips/page.js",
+  "/(admin)/(others-pages)/reimbursements/page": "app/(admin)/(others-pages)/reimbursements/page.js",
+  "/(admin)/(others-pages)/timesheet/page": "app/(admin)/(others-pages)/timesheet/page.js",
+  "/(admin)/(others-pages)/travel-expenses/page": "app/(admin)/(others-pages)/travel-expenses/page.js",
   "/(admin)/page": "app/(admin)/page.js",
   "/_not-found/page": "app/_not-found/page.js"
 }
