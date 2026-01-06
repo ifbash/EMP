@@ -653,7 +653,7 @@ function HelpDeskPage() {
         columnNumber: 9
     }, this);
 }
-_s(HelpDeskPage, "nLj4EczaE7AISRnL5dsNDqCpTPw=", false, function() {
+_s(HelpDeskPage, "gLMoSYZ5cMsex5J+lwMuZkV87wg=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
