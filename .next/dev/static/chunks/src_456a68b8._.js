@@ -783,7 +783,7 @@ function UserInfoCard() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm font-medium text-gray-800 dark:text-white/90",
-                                                children: "Musharof"
+                                                children: "Admin"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                 lineNumber: 29,
@@ -806,8 +806,7 @@ function UserInfoCard() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-sm font-medium text-gray-800 dark:text-white/90",
-                                                children: "Chowdhury"
+                                                className: "text-sm font-medium text-gray-800 dark:text-white/90"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                 lineNumber: 38,
@@ -831,7 +830,7 @@ function UserInfoCard() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm font-medium text-gray-800 dark:text-white/90",
-                                                children: "randomuser@pimjo.com"
+                                                children: "admin@example.com"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                 lineNumber: 47,
@@ -879,7 +878,7 @@ function UserInfoCard() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm font-medium text-gray-800 dark:text-white/90",
-                                                children: "Team Manager"
+                                                children: "Admin"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                 lineNumber: 65,
@@ -1123,7 +1122,7 @@ function UserInfoCard() {
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$form$2f$input$2f$InputField$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                                     type: "text",
-                                                                    defaultValue: "Musharof"
+                                                                    defaultValue: "Admin"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                                     lineNumber: 151,
@@ -1147,7 +1146,7 @@ function UserInfoCard() {
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$form$2f$input$2f$InputField$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                                     type: "text",
-                                                                    defaultValue: "Chowdhury"
+                                                                    defaultValue: ""
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                                     lineNumber: 156,
@@ -1171,7 +1170,7 @@ function UserInfoCard() {
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$form$2f$input$2f$InputField$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                                     type: "text",
-                                                                    defaultValue: "randomuser@pimjo.com"
+                                                                    defaultValue: "admin@example.com"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/user-profile/UserInfoCard.tsx",
                                                                     lineNumber: 161,

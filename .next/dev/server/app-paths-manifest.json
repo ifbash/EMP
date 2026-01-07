@@ -1,3 +1,6 @@
 {
-  "/(admin)/page": "app/(admin)/page.js"
+  "/(admin)/(others-pages)/payslips/page": "app/(admin)/(others-pages)/payslips/page.js",
+  "/(admin)/(others-pages)/profile/page": "app/(admin)/(others-pages)/profile/page.js",
+  "/(admin)/page": "app/(admin)/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }

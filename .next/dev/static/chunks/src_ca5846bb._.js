@@ -1327,7 +1327,7 @@ function UserDropdown() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "block mr-1 font-medium text-theme-sm",
-                        children: "Musharof"
+                        children: "Admin"
                     }, void 0, false, {
                         fileName: "[project]/src/components/header/UserDropdown.tsx",
                         lineNumber: 34,
@@ -1348,7 +1348,7 @@ function UserDropdown() {
                             strokeLinejoin: "round"
                         }, void 0, false, {
                             fileName: "[project]/src/components/header/UserDropdown.tsx",
-                            lineNumber: 46,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
@@ -1371,24 +1371,24 @@ function UserDropdown() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "block font-medium text-gray-700 text-theme-sm dark:text-gray-400",
-                                children: "Musharof Chowdhury"
+                                children: "Admin"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 62,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400",
-                                children: "randomuser@pimjo.com"
+                                children: "admin@example.com"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 65,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/header/UserDropdown.tsx",
-                        lineNumber: 61,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1415,24 +1415,24 @@ function UserDropdown() {
                                                 fill: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 85,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this),
                                         "Edit profile"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 71,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1456,24 +1456,24 @@ function UserDropdown() {
                                                 fill: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 110,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                            lineNumber: 103,
+                                            lineNumber: 102,
                                             columnNumber: 15
                                         }, this),
                                         "Account settings"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 96,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 96,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1497,30 +1497,30 @@ function UserDropdown() {
                                                 fill: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 135,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 127,
                                             columnNumber: 15
                                         }, this),
                                         "Support"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 121,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 121,
+                                lineNumber: 120,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/header/UserDropdown.tsx",
-                        lineNumber: 70,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1541,25 +1541,25 @@ function UserDropdown() {
                                     fill: ""
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 158,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                                lineNumber: 151,
+                                lineNumber: 150,
                                 columnNumber: 11
                             }, this),
                             "Sign out"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/header/UserDropdown.tsx",
-                        lineNumber: 147,
+                        lineNumber: 146,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/header/UserDropdown.tsx",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 7
             }, this)
         ]

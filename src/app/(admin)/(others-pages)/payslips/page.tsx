@@ -71,6 +71,7 @@ const payslipsData: Payslip[] = [
     // Add more payslips here for demonstration
 ];
 
+
 export default function PayslipsPage() {
     const [selectedPayslip, setSelectedPayslip] = useState<Payslip | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
