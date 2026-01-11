@@ -315,120 +315,107 @@ const AppSidebar: React.FC = () => {
 const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
 const pathname = usePathname();
 
-const renderMenuItems = (
-  navItems: NavItem[],
-  menuType: "main"
-) => (
-  <ul className="flex flex-col gap-4">
-    {navItems.map((nav, index) => (
-      <li key={nav.name}>
-        {nav.subItems ? (
-          <button
-            onClick={() => handleSubmenuToggle(index, menuType)}
-            className={`menu-item group  ${openSubmenu?.type === menuType && openSubmenu?.index === index
-              ? "menu-item-active"
-              : "menu-item-inactive"
-              } cursor-pointer ${!isExpanded && !isHovered
-                ? "lg:justify-center"
-                : "lg:justify-start"
-              }`}
-          >
-            <span
-              className={` ${openSubmenu?.type === menuType && openSubmenu?.index === index
-                ? "menu-item-icon-active"
-                : "menu-item-icon-inactive"
-                }`}
-            >
-              {nav.icon}
-            </span>
-            {(isExpanded || isHovered || isMobileOpen) && (
-              <span className={`menu-item-text`}>{nav.name}</span>
-            )}
-            {(isExpanded || isHovered || isMobileOpen) && (
-              <ChevronDownIcon
-                className={`ml-auto w-5 h-5 transition-transform duration-200  ${openSubmenu?.type === menuType &&
-                  openSubmenu?.index === index
-                  ? "rotate-180 text-brand-500"
-                  : ""
-                  }`}
-              />
-            )}
-          </button>
-        ) : (
-          nav.path && (
-            <Link
-              href={nav.path}
-              className={`menu-item group ${isActive(nav.path) ? "menu-item-active" : "menu-item-inactive"
-                }`}
-            >
-              <span
-                className={`${isActive(nav.path)
-                  ? "menu-item-icon-active"
-                  : "menu-item-icon-inactive"
-                  }`}
+const renderMenuItems = (navItems: NavItem[], menuType: "main") => (
+  <ul className="flex flex-col gap-2">
+    {navItems.map((nav, index) => {
+      const isSelected = openSubmenu?.type === menuType && openSubmenu?.index === index;
+
+      return (
+        <li 
+          key={nav.name} 
+          className="relative px-2 group/menu-parent"
+          onMouseEnter={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const opensUpward = rect.top > windowHeight * 0.6;
+            
+            // Set the submenu state
+            setOpenSubmenu({ type: menuType, index });
+            
+            // Store positioning data
+            setSubMenuHeight((prev) => ({ 
+              ...prev, 
+              [`top-${index}`]: rect.top,
+              [`dir-${index}`]: opensUpward ? 1 : 0 
+            }));
+          }}
+          onMouseLeave={() => {
+            setOpenSubmenu(null);
+          }}
+        >
+          {nav.subItems ? (
+            <>
+              {/* Trigger Button Area */}
+              <div
+                className={`menu-item group w-full flex items-center transition-all rounded-lg p-3 cursor-pointer ${
+                  isSelected ? "bg-brand-50 text-brand-600 shadow-sm" : "text-gray-700 hover:bg-gray-100"
+                } ${!isExpanded && !isHovered ? "justify-center" : "justify-start"}`}
               >
-                {nav.icon}
-              </span>
+                <span className={isSelected ? "text-brand-600" : ""}>{nav.icon}</span>
+                {(isExpanded || isHovered || isMobileOpen) && (
+                  <>
+                    <span className="ml-3 text-sm font-medium">{nav.name}</span>
+                    <span className="ml-auto opacity-40">
+                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    </span>
+                  </>
+                )}
+              </div>
+
+              {/* THE SUBMENU POPUP */}
+              {isSelected && (
+                <div
+                  className="fixed z-[9999]"
+                  style={{
+                    // Align to the edge of the sidebar
+                    left: isExpanded || isHovered || isMobileOpen ? "285px" : "85px",
+                    // Smart Up/Down positioning
+                    top: subMenuHeight[`dir-${index}`] 
+                         ? "auto" 
+                         : `${subMenuHeight[`top-${index}`]}px`,
+                    bottom: subMenuHeight[`dir-${index}`] 
+                            ? `${window.innerHeight - (subMenuHeight[`top-${index}`] + 45)}px` 
+                            : "auto",
+                    // The "Bridge": This invisible padding ensures the mouse 
+                    // stays "inside" the menu while moving from the sidebar
+                    paddingLeft: "20px",
+                    marginLeft: "-10px"
+                  }}
+                >
+                  <div className="min-w-[260px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-[15px_15px_50px_rgba(0,0,0,0.2)] rounded-xl overflow-hidden animate-in fade-in slide-in-from-left-2 duration-150">
+                    <div className="px-5 py-3 text-[11px] font-bold uppercase tracking-wider text-gray-400 bg-gray-50/50 border-b dark:border-gray-800">
+                      {nav.name}
+                    </div>
+                    <ul className="p-2 space-y-1 max-h-[60vh] overflow-y-auto no-scrollbar">
+                      {nav.subItems.map((subItem) => (
+                        <li key={subItem.name}>
+                          <Link
+                            href={subItem.path}
+                            className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors"
+                          >
+                            {subItem.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </>
+          ) : (
+            <Link
+              href={nav.path || "/"}
+              className={`menu-item group ${isActive(nav.path || "") ? "menu-item-active" : "menu-item-inactive"}`}
+            >
+              <span>{nav.icon}</span>
               {(isExpanded || isHovered || isMobileOpen) && (
-                <span className={`menu-item-text`}>{nav.name}</span>
+                <span className="ml-3 text-sm font-medium">{nav.name}</span>
               )}
             </Link>
-          )
-        )}
-        {nav.subItems && (isExpanded || isHovered || isMobileOpen) && (
-          <div
-            ref={(el) => {
-              subMenuRefs.current[`${menuType}-${index}`] = el;
-            }}
-            className="overflow-hidden transition-all duration-300"
-            style={{
-              height:
-                openSubmenu?.type === menuType && openSubmenu?.index === index
-                  ? `${subMenuHeight[`${menuType}-${index}`]}px`
-                  : "0px",
-            }}
-          >
-            <ul className="mt-2 space-y-1 ml-9">
-              {nav.subItems.map((subItem) => (
-                <li key={subItem.name}>
-                  <Link
-                    href={subItem.path}
-                    className={`menu-dropdown-item ${isActive(subItem.path)
-                      ? "menu-dropdown-item-active"
-                      : "menu-dropdown-item-inactive"
-                      }`}
-                  >
-                    {subItem.name}
-                    <span className="flex items-center gap-1 ml-auto">
-                      {subItem.new && (
-                        <span
-                          className={`ml-auto ${isActive(subItem.path)
-                            ? "menu-dropdown-badge-active"
-                            : "menu-dropdown-badge-inactive"
-                            } menu-dropdown-badge `}
-                        >
-                          new
-                        </span>
-                      )}
-                      {subItem.pro && (
-                        <span
-                          className={`ml-auto ${isActive(subItem.path)
-                            ? "menu-dropdown-badge-active"
-                            : "menu-dropdown-badge-inactive"
-                            } menu-dropdown-badge `}
-                        >
-                          pro
-                        </span>
-                      )}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </li>
-    ))}
+          )}
+        </li>
+      );
+    })}
   </ul>
 );
 
