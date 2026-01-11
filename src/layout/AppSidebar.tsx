@@ -25,7 +25,6 @@ TaskIcon,
 TimeIcon,
 UserCircleIcon,
 } from "../icons/index";
-import SidebarWidget from "./SidebarWidget";
 import { Clock, Computer, Group, Plane } from "lucide-react";
 import { Asset } from "next/font/google";
 import { FLIGHT_HEADERS } from "next/dist/client/components/app-router-headers";
@@ -36,101 +35,6 @@ icon: React.ReactNode;
 path?: string;
 subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
-
-// const navItems: NavItem[] = [
-//   {
-//     icon: <GridIcon />,
-//     name: "Dashboard",
-//     path: "/",
-//   },
-//   {
-//     icon: <CalenderIcon />,
-//     name: "Calendar",
-//     path: "/leave-calendar",
-//   },
-//   {
-//     icon: <DocsIcon />,
-//     name: "Employee Document Hub",
-//     path: "/employee-hub",
-//   },
-//   {
-//     icon: <ListIcon />,
-//     name: "HR Policies",
-//     path: "/hr-policies",
-//   },
-//   {
-//     icon: <TimeIcon />,
-//     name: "TimeSheet",
-//     path: "/timesheet",
-//   },
-//   {
-//     icon: <DollarLineIcon />,
-//     name: "Benefits",
-//     path: "/benefits",
-//   },
-//   {
-//     icon: <TaskIcon />,
-//     name: "Help Desk",
-//     path: "/help-desk",
-//   },
-//   {
-//     icon: <ShootingStarIcon />,
-//     name: "Learning & Training",
-//     path: "/learning-training",
-//   },
-//   {
-//     icon: <UserCircleIcon />,
-//     name: "Leave IfBash",
-//     path: "/leave-ifbash",
-//   },
-//   {
-//     icon: <ChatIcon />,
-//     name: "Announcements",
-//     path: "/announcements",
-//   },
-//   {
-//     icon: <BoltIcon />,
-//     name: "Payslips",
-//     path: "/payslips",
-//   },
-//   {
-//     icon: <TableIcon />,
-//     name: "Reimbursements",
-//     path: "/reimbursements",
-//   },
-//   {
-//     icon: <CalenderIcon />,
-//     name: "Appreciate",
-//     path: "/appreciate",
-//   },
-//   {
-//     icon: <UserCircleIcon />,
-//     name: "Admin",
-//     path: "/admin",
-//   },
-
-
-
-//   // {
-//   //   name: "Forms",
-//   //   icon: <ListIcon />,
-//   //   subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
-//   // },
-//   // {
-//   //   name: "Tables",
-//   //   icon: <TableIcon />,
-//   //   subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-//   // },
-//   // {
-//   //   name: "Pages",
-//   //   icon: <PageIcon />,
-//   //   subItems: [
-//   //     { name: "Blank Page", path: "/blank", pro: false },
-//   //     { name: "404 Error", path: "/error-404", pro: false },
-//   //   ],
-//   // },
-// ];
-
 
 const navItems: NavItem[] = [
 {
@@ -281,34 +185,7 @@ const navItems: NavItem[] = [
 
 
 const othersItems: NavItem[] = [
-// {
-//   icon: <PieChartIcon />,
-//   name: "Charts",
-//   subItems: [
-//     { name: "Line Chart", path: "/line-chart", pro: false },
-//     { name: "Bar Chart", path: "/bar-chart", pro: false },
-//   ],
-// },
-// {
-//   icon: <BoxCubeIcon />,
-//   name: "UI Elements",
-//   subItems: [
-//     { name: "Alerts", path: "/alerts", pro: false },
-//     { name: "Avatar", path: "/avatars", pro: false },
-//     { name: "Badge", path: "/badge", pro: false },
-//     { name: "Buttons", path: "/buttons", pro: false },
-//     { name: "Images", path: "/images", pro: false },
-//     { name: "Videos", path: "/videos", pro: false },
-//   ],
-// },
-// {
-//   icon: <PlugInIcon />,
-//   name: "Authentication",
-//   subItems: [
-//     { name: "Sign In", path: "/signin", pro: false },
-//     { name: "Sign Up", path: "/signup", pro: false },
-//   ],
-// },
+
 ];
 
 const AppSidebar: React.FC = () => {
@@ -316,98 +193,76 @@ const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
 const pathname = usePathname();
 
 const renderMenuItems = (navItems: NavItem[], menuType: "main") => (
-  <ul className="flex flex-col gap-2">
+  <ul className="flex flex-col gap-1"> {/* Reduced gap for tighter accordion look */}
     {navItems.map((nav, index) => {
-      const isSelected = openSubmenu?.type === menuType && openSubmenu?.index === index;
+      const isOpen = openSubmenu?.type === menuType && openSubmenu?.index === index;
 
       return (
-        <li 
-          key={nav.name} 
-          className="relative px-2 group/menu-parent"
-          onMouseEnter={(e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            const opensUpward = rect.top > windowHeight * 0.6;
-            
-            // Set the submenu state
-            setOpenSubmenu({ type: menuType, index });
-            
-            // Store positioning data
-            setSubMenuHeight((prev) => ({ 
-              ...prev, 
-              [`top-${index}`]: rect.top,
-              [`dir-${index}`]: opensUpward ? 1 : 0 
-            }));
-          }}
-          onMouseLeave={() => {
-            setOpenSubmenu(null);
-          }}
-        >
+        <li key={nav.name} className="relative">
           {nav.subItems ? (
             <>
-              {/* Trigger Button Area */}
-              <div
-                className={`menu-item group w-full flex items-center transition-all rounded-lg p-3 cursor-pointer ${
-                  isSelected ? "bg-brand-50 text-brand-600 shadow-sm" : "text-gray-700 hover:bg-gray-100"
+              <button
+                onClick={() => handleSubmenuToggle(index, menuType)}
+                className={`menu-item group w-full flex items-center p-3 rounded-lg transition-all ${
+                  isOpen 
+                    ? "bg-brand-50/50 text-brand-600 dark:bg-brand-500/10" 
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 } ${!isExpanded && !isHovered ? "justify-center" : "justify-start"}`}
               >
-                <span className={isSelected ? "text-brand-600" : ""}>{nav.icon}</span>
+                <span className={`${isOpen ? "text-brand-600" : "text-gray-500"}`}>
+                  {nav.icon}
+                </span>
+                
                 {(isExpanded || isHovered || isMobileOpen) && (
                   <>
                     <span className="ml-3 text-sm font-medium">{nav.name}</span>
-                    <span className="ml-auto opacity-40">
-                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                    </span>
+                    <ChevronDownIcon
+                      className={`ml-auto w-4 h-4 transition-transform duration-300 ${
+                        isOpen ? "rotate-180 text-brand-500" : "text-gray-400"
+                      }`}
+                    />
                   </>
                 )}
-              </div>
+              </button>
 
-              {/* THE SUBMENU POPUP */}
-              {isSelected && (
-                <div
-                  className="fixed z-[9999]"
-                  style={{
-                    // Align to the edge of the sidebar
-                    left: isExpanded || isHovered || isMobileOpen ? "285px" : "85px",
-                    // Smart Up/Down positioning
-                    top: subMenuHeight[`dir-${index}`] 
-                         ? "auto" 
-                         : `${subMenuHeight[`top-${index}`]}px`,
-                    bottom: subMenuHeight[`dir-${index}`] 
-                            ? `${window.innerHeight - (subMenuHeight[`top-${index}`] + 45)}px` 
-                            : "auto",
-                    // The "Bridge": This invisible padding ensures the mouse 
-                    // stays "inside" the menu while moving from the sidebar
-                    paddingLeft: "20px",
-                    marginLeft: "-10px"
-                  }}
-                >
-                  <div className="min-w-[260px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-[15px_15px_50px_rgba(0,0,0,0.2)] rounded-xl overflow-hidden animate-in fade-in slide-in-from-left-2 duration-150">
-                    <div className="px-5 py-3 text-[11px] font-bold uppercase tracking-wider text-gray-400 bg-gray-50/50 border-b dark:border-gray-800">
-                      {nav.name}
-                    </div>
-                    <ul className="p-2 space-y-1 max-h-[60vh] overflow-y-auto no-scrollbar">
-                      {nav.subItems.map((subItem) => (
-                        <li key={subItem.name}>
-                          <Link
-                            href={subItem.path}
-                            className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 rounded-lg hover:bg-brand-50 hover:text-brand-600 transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
+              {/* VERTICAL ACCORDION SUBMENU */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isOpen && (isExpanded || isHovered || isMobileOpen)
+                    ? "max-h-[1000px] opacity-100 mt-1" 
+                    : "max-h-0 opacity-0"
+                }`}
+              >
+                <ul className="ml-9 border-l border-gray-200 dark:border-gray-700 space-y-1">
+                  {nav.subItems.map((subItem) => (
+                    <li key={subItem.name}>
+                      <Link
+                        href={subItem.path}
+                        className={`flex items-center px-4 py-2 text-sm rounded-md transition-colors ${
+                          isActive(subItem.path)
+                            ? "text-brand-600 font-semibold bg-brand-50/50 dark:bg-brand-500/10"
+                            : "text-gray-600 dark:text-gray-400 hover:text-brand-600 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        }`}
+                      >
+                        {subItem.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </>
           ) : (
             <Link
               href={nav.path || "/"}
-              className={`menu-item group ${isActive(nav.path || "") ? "menu-item-active" : "menu-item-inactive"}`}
+              className={`menu-item group flex items-center p-3 rounded-lg transition-all ${
+                isActive(nav.path || "") 
+                  ? "bg-brand-50 text-brand-600 shadow-sm" 
+                  : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              } ${!isExpanded && !isHovered ? "justify-center" : "justify-start"}`}
             >
-              <span>{nav.icon}</span>
+              <span className={isActive(nav.path || "") ? "text-brand-600" : "text-gray-500"}>
+                {nav.icon}
+              </span>
               {(isExpanded || isHovered || isMobileOpen) && (
                 <span className="ml-3 text-sm font-medium">{nav.name}</span>
               )}
