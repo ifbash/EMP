@@ -1,37 +1,710 @@
-[00:00:05.342] Server  LOG      ✓ Ready in 3.4s
-[00:00:08.371] Server  LOG      ○ Compiling / ...
-[00:00:17.423] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:25.011] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.653] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:27.018] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:30.182] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:32.256] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:54.551] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:54.707] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:54.707] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:54.707] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:17.659] Server  LOG      ✓ Ready in 16.3s
+[00:00:20.727] Server  LOG      ○ Compiling / ...
+[00:00:41.032] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:41.269] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:41.269] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:19.947] Server  LOG      ○ Compiling /payslips ...
+[00:01:33.799] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:33.918] Browser WARN    Image with src "/images/error/404.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:01:56.348] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:02:04.179] Server  LOG      ○ Compiling /payslips ...
-[00:06:14.822] Server  LOG      ✓ Compiled in 344ms
-[00:06:28.141] Server  LOG      ✓ Compiled in 145ms
-[00:08:20.858] Server  LOG      ✓ Compiled in 147ms
-[00:08:48.581] Server  LOG      ✓ Compiled in 89ms
-[00:13:39.868] Server  LOG      ✓ Compiled in 138ms
-[00:14:07.806] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:14:07.960] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:01:33.918] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:14:07.960] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:14:16.565] Server  LOG      ✓ Compiled in 147ms
-[00:16:44.387] Server  LOG      ✓ Compiled in 159ms
-[00:16:52.740] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:52.924] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:01:33.918] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:33.918] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:35.883] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:35.884] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:09.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:09.535] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:16:52.924] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:16:59.540] Server  LOG      ✓ Compiled in 119ms
-[00:19:19.915] Server  LOG      ✓ Compiled in 113ms
-[00:20:05.749] Server  LOG      ✓ Compiled in 122ms
-[00:20:21.347] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:20:21.519] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:02:09.535] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:09.535] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:16.030] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:16.030] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:23.938] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:24.056] Browser WARN    Image with src "/images/shape/grid-01.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:20:21.519] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:24.056] Browser WARN    Image with src "http://localhost:3000/images/shape/grid-01.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:24.056] Browser WARN    Image with src "http://localhost:3000/images/error/404.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:25.965] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:02:25.965] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:10:29.459] Server  LOG      ✓ Compiled in 360ms
+[00:10:59.545] Server  LOG      ✓ Compiled in 212ms
+[00:56:59.001] Server  LOG      ✓ Compiled in 1646ms
+[00:56:59.348] Browser ERROR   uncaughtError: Error: Tiptap Error: SSR has been detected, please set `immediatelyRender` explicitly to `false` to avoid hydration mismatches.
+[00:57:57.274] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:57:57.300] Server  LOG      ✓ Compiled in 142ms
+[00:57:58.733] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:57:59.662] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:58:00.598] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:58:00.598] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:05:24.523] Server  LOG      ✓ Compiled in 0ms
+[01:05:26.354] Browser ERROR   uncaughtError: TypeError: react_dom_1.default.findDOMNode is not a function
+[01:11:35.688] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx
+Module not found: Can't resolve 'react-quill'
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:35.979] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:35.984] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:35.989] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.037] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx
+Module not found: Can't resolve 'react-quill'
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.038] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx
+Module not found: Can't resolve 'react-quill'
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.040] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.041] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.043] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.046] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx
+Module not found: Can't resolve 'react-quill'
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.047] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx
+Module not found: Can't resolve 'react-quill'
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.049] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.051] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.052] Server  ERROR    ⨯ ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[01:11:36.107] Server  LOG      ✓ Compiled in 0ms
+[01:11:37.096] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:37.096] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:37.096] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:37.096] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:42.397] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:42.397] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:44.398] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:44.399] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:55.486] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:11:55.486] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:15.521] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:15.521] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:25.526] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:25.526] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:45.561] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:12:45.561] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:13:05.560] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:11:34
+Module not found: Can't resolve 'react-quill'
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+> 11 | const ReactQuill = dynamic(() => import("react-quill"), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^
+  12 |     ssr: false,
+  13 | });
+  14 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:13:05.560] Browser ERROR   ./src/app/(admin)/(others-pages)/hr-policies/page.tsx:7:1
+Module not found: Can't resolve 'react-quill/dist/quill.snow.css'
+   5 | import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+   6 | import { Modal } from "@/components/ui/modal";
+>  7 | import "react-quill/dist/quill.snow.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | /* ================= REACT QUILL (NO SSR) ================= */
+  10 |
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component Browser]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Client Component SSR]
+    ./src/app/(admin)/(others-pages)/hr-policies/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[01:13:13.715] Server  LOG      ✓ Compiled in 398ms
+[01:13:15.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:13:16.600] Browser WARN    Image with src "http://localhost:3000/images/logo/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:13:16.600] Browser WARN    Image with src "/images/user/owner.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:13:16.600] Browser WARN    Image with src "/images/logo/logo.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:18:56.956] Server  LOG      ✓ Compiled in 570ms
+[01:23:15.663] Server  LOG      ✓ Compiled in 178ms
+[01:26:30.126] Server  LOG      ✓ Compiled in 342ms
+[01:26:38.838] Browser WARN    [tiptap warn]: Duplicate extension names found: ['link', 'underline']. This can lead to issues.
+[01:33:25.796] Server  LOG      ✓ Compiled in 282ms

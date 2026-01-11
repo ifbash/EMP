@@ -1,4 +1,5 @@
 {
+  "/(admin)/(others-pages)/hr-policies/page": "app/(admin)/(others-pages)/hr-policies/page.js",
   "/(admin)/(others-pages)/payslips/page": "app/(admin)/(others-pages)/payslips/page.js",
   "/(admin)/(others-pages)/profile/page": "app/(admin)/(others-pages)/profile/page.js",
   "/(admin)/page": "app/(admin)/page.js",
