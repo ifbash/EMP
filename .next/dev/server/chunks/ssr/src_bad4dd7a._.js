@@ -1024,11 +1024,18 @@ function HrPoliciesPage() {
     const [newPolicyTitle, setNewPolicyTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const [newPolicyCategory, setNewPolicyCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialCategories[0].id);
     const [newPolicyContent, setNewPolicyContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("<p>Start writing your policy...</p>");
+    const [editingPolicy, setEditingPolicy] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // Track if editing
+    // Create Category State
+    const [isCreateCategoryModalOpen, setIsCreateCategoryModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [newCategoryName, setNewCategoryName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [newCategoryDescription, setNewCategoryDescription] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [newCategoryImageUrl, setNewCategoryImageUrl] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [editingCategory, setEditingCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null); // Track if editing
     // Pagination states
     const [categoryPage, setCategoryPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
     const categoriesPerPage = 6;
     const [policyPage, setPolicyPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
-    const policiesPerPage = 6;
+    const policiesPerPage = 9;
     const totalCategoryPages = Math.ceil(categories.length / categoriesPerPage);
     const displayedCategories = categories.slice((categoryPage - 1) * categoriesPerPage, categoryPage * categoriesPerPage);
     const displayedPolicies = selectedCategory ? selectedCategory.policies.slice((policyPage - 1) * policiesPerPage, policyPage * policiesPerPage) : [];
@@ -1043,16 +1050,60 @@ function HrPoliciesPage() {
         setSelectedPolicy(policy);
     };
     const closeModal = ()=>setSelectedPolicy(null);
-    const handleCreatePolicy = ()=>{
+    // --- Policy Handlers ---
+    const openCreatePolicyModal = ()=>{
+        setEditingPolicy(null);
+        setNewPolicyTitle("");
+        setNewPolicyCategory(selectedCategory ? selectedCategory.id : initialCategories[0].id);
+        setNewPolicyContent("<p>Start writing your policy...</p>");
+        setIsCreateModalOpen(true);
+    };
+    const openEditPolicyModal = (policy)=>{
+        setEditingPolicy(policy);
+        setNewPolicyTitle(policy.title);
+        // Find which category this policy belongs to if not already selected
+        const categoryId = selectedCategory?.id || categories.find((c)=>c.policies.find((p)=>p.id === policy.id))?.id || initialCategories[0].id;
+        setNewPolicyCategory(categoryId);
+        setNewPolicyContent(typeof policy.content === 'string' ? policy.content : ""); // Note: Complex ReactNode content might wait for a better editor handling
+        // Locate the content string if possible, otherwise we might need a better way to serialize ReactNode back to HTML for the editor
+        // For this demo, we assume content is HTML string as pushed by the editor. 
+        // If it was the hardcoded ReactNode, we might not be able to edit it nicely in the editor.
+        // Let's force it to string for the editable ones.
+        if (typeof policy.content !== 'string') {
+            // If it's the initial hardcoded data, we might just warn or leave it empty? 
+            // Or better, let's just not support editing the hardcoded ReactNode ones ideally, 
+            // but for now let's just put a placeholder or convert if simple.
+            setNewPolicyContent("<p><i>(Content cannot be fully edited in Tiptap)</i></p>");
+        }
+        setIsCreateModalOpen(true);
+        // If we are editing from the details modal, close it
+        setSelectedPolicy(null);
+    };
+    const handleSavePolicy = ()=>{
         if (!newPolicyTitle || !newPolicyContent) return;
         const updatedCategories = categories.map((cat)=>{
-            if (cat.id === newPolicyCategory) {
-                return {
-                    ...cat,
-                    policies: [
-                        ...cat.policies,
-                        {
-                            id: newPolicyTitle.toLowerCase().replace(/\s+/g, '-'),
+            // Remove from old category if category changed (only logic for moved policies could go here, 
+            // but for simplicity let's assume if editing, we might just update valid fields or handle move later. 
+            // For now, let's keep it simple: strict update within category or add new)
+            // Logic for Update:
+            if (editingPolicy) {
+                // Check if this category contains the policy to update
+                const policyIndex = cat.policies.findIndex((p)=>p.id === editingPolicy.id);
+                if (policyIndex > -1) {
+                    // Check if we are moving categories?
+                    if (cat.id !== newPolicyCategory) {
+                        // Remove from this category
+                        return {
+                            ...cat,
+                            policies: cat.policies.filter((p)=>p.id !== editingPolicy.id)
+                        };
+                    } else {
+                        // Update in place
+                        const updatedPolicies = [
+                            ...cat.policies
+                        ];
+                        updatedPolicies[policyIndex] = {
+                            ...editingPolicy,
                             title: newPolicyTitle,
                             content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 dangerouslySetInnerHTML: {
@@ -1061,105 +1112,340 @@ function HrPoliciesPage() {
                                 className: "prose dark:prose-invert max-w-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                lineNumber: 162,
+                                lineNumber: 218,
                                 columnNumber: 38
                             }, this)
-                        }
-                    ]
-                };
+                        };
+                        return {
+                            ...cat,
+                            policies: updatedPolicies
+                        };
+                    }
+                }
+                // If this is the NEW category and we moved it here (it wasn't here before)
+                if (cat.id === newPolicyCategory && policyIndex === -1) {
+                // We need to add it, but verification of removal from old runs in the map above. 
+                // actually map runs sequentially or parallel? Array.map is synchronous.
+                // But we can't easily know if we "will remove" it from another iteration.
+                // EASIER -> Filter all categories to remove old instance, THEN add to new.
+                }
             }
             return cat;
         });
-        setCategories(updatedCategories);
+        // Refined Logic:
+        let newCategories = [
+            ...categories
+        ];
+        if (editingPolicy) {
+            // 1. Remove existing policy from wherever it was
+            newCategories = newCategories.map((c)=>({
+                    ...c,
+                    policies: c.policies.filter((p)=>p.id !== editingPolicy.id)
+                }));
+            // 2. Add/Update to target category
+            newCategories = newCategories.map((c)=>{
+                if (c.id === newPolicyCategory) {
+                    return {
+                        ...c,
+                        policies: [
+                            ...c.policies,
+                            {
+                                id: editingPolicy.id,
+                                title: newPolicyTitle,
+                                content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    dangerouslySetInnerHTML: {
+                                        __html: newPolicyContent
+                                    },
+                                    className: "prose dark:prose-invert max-w-none"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 252,
+                                    columnNumber: 38
+                                }, this),
+                                imageUrl: editingPolicy.imageUrl
+                            }
+                        ]
+                    };
+                }
+                return c;
+            });
+        } else {
+            // Create New
+            newCategories = newCategories.map((cat)=>{
+                if (cat.id === newPolicyCategory) {
+                    return {
+                        ...cat,
+                        policies: [
+                            ...cat.policies,
+                            {
+                                id: newPolicyTitle.toLowerCase().replace(/\s+/g, '-'),
+                                title: newPolicyTitle,
+                                content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    dangerouslySetInnerHTML: {
+                                        __html: newPolicyContent
+                                    },
+                                    className: "prose dark:prose-invert max-w-none"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 270,
+                                    columnNumber: 42
+                                }, this)
+                            }
+                        ]
+                    };
+                }
+                return cat;
+            });
+        }
+        setCategories(newCategories);
         setIsCreateModalOpen(false);
-        // Reset form
-        setNewPolicyTitle("");
-        setNewPolicyContent("<p>Start writing your policy...</p>");
-        // If the user is currently viewing the category, update it essentially
-        if (selectedCategory && selectedCategory.id === newPolicyCategory) {
-            const updatedSelected = updatedCategories.find((c)=>c.id === selectedCategory.id);
+        // Update selected category view if needed
+        if (selectedCategory) {
+            const updatedSelected = newCategories.find((c)=>c.id === selectedCategory.id);
             if (updatedSelected) setSelectedCategory(updatedSelected);
         }
+    };
+    // --- Category Handlers ---
+    const openCreateCategoryModal = ()=>{
+        setEditingCategory(null);
+        setNewCategoryName("");
+        setNewCategoryDescription("");
+        setNewCategoryImageUrl("");
+        setIsCreateCategoryModalOpen(true);
+    };
+    const openEditCategoryModal = (category)=>{
+        setEditingCategory(category);
+        setNewCategoryName(category.name);
+        setNewCategoryDescription(category.description);
+        setNewCategoryImageUrl(category.imageUrl || "");
+        setIsCreateCategoryModalOpen(true);
+    };
+    const handleSaveCategory = ()=>{
+        if (!newCategoryName) return;
+        if (editingCategory) {
+            // Update
+            const updatedCategories = categories.map((cat)=>cat.id === editingCategory.id ? {
+                    ...cat,
+                    name: newCategoryName,
+                    description: newCategoryDescription,
+                    imageUrl: newCategoryImageUrl || defaultImageUrl
+                } : cat);
+            setCategories(updatedCategories);
+            // Update selected view if we are viewing it
+            if (selectedCategory && selectedCategory.id === editingCategory.id) {
+                const me = updatedCategories.find((c)=>c.id === editingCategory.id);
+                if (me) setSelectedCategory(me);
+            }
+        } else {
+            // Create
+            const newCategory = {
+                id: newCategoryName.toLowerCase().replace(/\s+/g, '-'),
+                name: newCategoryName,
+                description: newCategoryDescription,
+                imageUrl: newCategoryImageUrl || defaultImageUrl,
+                policies: []
+            };
+            setCategories([
+                ...categories,
+                newCategory
+            ]);
+        }
+        setIsCreateCategoryModalOpen(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-between items-center mb-6",
+                className: "flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$common$2f$PageBreadCrumb$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         pageTitle: "HR Policies"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                        lineNumber: 185,
+                        lineNumber: 347,
                         columnNumber: 17
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setIsCreateModalOpen(true),
-                        className: "bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors",
-                        children: "+ Create Policy"
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex gap-3",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: openCreateCategoryModal,
+                                className: "flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2.5 rounded-xl text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm hover:shadow",
+                                children: "+ New Category"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                lineNumber: 349,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: openCreatePolicyModal,
+                                className: "flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2.5 rounded-xl text-sm font-medium transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5",
+                                children: "+ New Policy"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                lineNumber: 355,
+                                columnNumber: 21
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                        lineNumber: 186,
+                        lineNumber: 348,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                lineNumber: 184,
+                lineNumber: 346,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "min-h-screen rounded-2xl border border-gray-200 bg-white px-5 py-7 dark:border-gray-800 dark:bg-white/[0.03] xl:px-10 xl:py-12",
+                className: "min-h-[calc(100vh-140px)]",
                 children: !selectedCategory ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "mb-6 text-xl font-semibold text-gray-800 dark:text-white/90",
-                            children: "Policy Categories"
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mb-6",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                    className: "text-xl font-bold text-gray-900 dark:text-white",
+                                    children: "Browse Categories"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 369,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-sm text-gray-500 dark:text-gray-400 mt-1",
+                                    children: "Select a category to view related policies"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 372,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 198,
+                            lineNumber: 368,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3",
                             children: displayedCategories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     onClick: ()=>handleCategoryClick(category),
-                                    className: "cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6 transition-all hover:bg-gray-100 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700",
+                                    className: "group relative cursor-pointer overflow-hidden rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700/50 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: category.imageUrl || defaultImageUrl,
-                                            alt: category.name,
-                                            className: "w-full h-40 object-cover rounded-t-lg"
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "aspect-video w-full overflow-hidden bg-gray-100 dark:bg-gray-900",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: category.imageUrl || defaultImageUrl,
+                                                alt: category.name,
+                                                className: "h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                lineNumber: 385,
+                                                columnNumber: 41
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 208,
+                                            lineNumber: 384,
                                             columnNumber: 37
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "mb-2 text-lg font-bold text-gray-900 dark:text-white",
-                                            children: category.name
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "p-5",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex justify-between items-start mb-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                            className: "text-lg font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors",
+                                                            children: category.name
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                            lineNumber: 393,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                            onClick: (e)=>{
+                                                                e.stopPropagation();
+                                                                openEditCategoryModal(category);
+                                                            },
+                                                            className: "opacity-0 group-hover:opacity-100 p-1.5 text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-all rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700",
+                                                            title: "Edit Category",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                                xmlns: "http://www.w3.org/2000/svg",
+                                                                width: "16",
+                                                                height: "16",
+                                                                viewBox: "0 0 24 24",
+                                                                fill: "none",
+                                                                stroke: "currentColor",
+                                                                strokeWidth: "2",
+                                                                strokeLinecap: "round",
+                                                                strokeLinejoin: "round",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                        lineNumber: 404,
+                                                                        columnNumber: 227
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                        d: "m15 5 4 4"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                        lineNumber: 404,
+                                                                        columnNumber: 288
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 404,
+                                                                columnNumber: 49
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                            lineNumber: 396,
+                                                            columnNumber: 45
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 392,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed",
+                                                    children: category.description
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 407,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "mt-4 flex items-center gap-2 text-xs font-medium text-brand-600 dark:text-brand-400 opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0",
+                                                    children: [
+                                                        "View ",
+                                                        category.policies.length,
+                                                        " Policies →"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 410,
+                                                    columnNumber: 41
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 213,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm text-gray-500 dark:text-gray-400",
-                                            children: category.description
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 216,
+                                            lineNumber: 391,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, category.id, true, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 379,
                                     columnNumber: 33
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 201,
+                            lineNumber: 377,
                             columnNumber: 25
                         }, this),
                         totalCategoryPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1172,7 +1458,7 @@ function HrPoliciesPage() {
                                     children: "Prev"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 421,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1182,7 +1468,7 @@ function HrPoliciesPage() {
                                     children: "1"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 233,
+                                    lineNumber: 428,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1192,80 +1478,268 @@ function HrPoliciesPage() {
                                     children: "Next"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 241,
+                                    lineNumber: 436,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 225,
+                            lineNumber: 420,
                             columnNumber: 29
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                    lineNumber: 197,
+                    lineNumber: 367,
                     columnNumber: 21
                 }, this) : // Policies inside selected category
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "animate-in fade-in slide-in-from-bottom-4 duration-500",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            onClick: handleBackToCategories,
-                            className: "mb-6 flex items-center gap-2 text-sm font-medium text-blue-600 hover:underline dark:text-blue-400",
-                            children: "← Back to Categories"
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-center gap-4 mb-8",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleBackToCategories,
+                                    className: "group flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-500 hover:text-brand-600 hover:border-brand-600 transition-all dark:text-gray-400 dark:hover:text-brand-400",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        width: "20",
+                                        height: "20",
+                                        viewBox: "0 0 24 24",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        strokeWidth: "2",
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        className: "transform transition-transform group-hover:-translate-x-1",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            d: "m15 18-6-6 6-6"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                            lineNumber: 458,
+                                            columnNumber: 281
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                        lineNumber: 458,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 454,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                            className: "text-2xl font-bold text-gray-900 dark:text-white",
+                                            children: selectedCategory.name
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                            lineNumber: 461,
+                                            columnNumber: 33
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center gap-3 mt-1",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-sm text-gray-500 dark:text-gray-400",
+                                                    children: selectedCategory.description
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 465,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "h-1 w-1 rounded-full bg-gray-300 dark:bg-gray-600"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 468,
+                                                    columnNumber: 37
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                    onClick: ()=>openEditCategoryModal(selectedCategory),
+                                                    className: "text-xs font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400 hover:underline",
+                                                    children: "Edit Details"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 469,
+                                                    columnNumber: 37
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                            lineNumber: 464,
+                                            columnNumber: 33
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 460,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 258,
-                            columnNumber: 25
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "mb-6 text-xl font-semibold text-gray-800 dark:text-white/90",
-                            children: selectedCategory.name
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 264,
+                            lineNumber: 453,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3",
+                            className: "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3",
                             children: displayedPolicies.map((policy)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     onClick: ()=>handlePolicyClick(policy),
-                                    className: "cursor-pointer rounded-xl border border-gray-200 bg-gray-50 p-6 transition-all hover:bg-gray-100 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700",
+                                    className: "group relative cursor-pointer rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 transition-all hover:border-brand-200 dark:hover:border-brand-800 hover:shadow-lg hover:-translate-y-0.5",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: policy.imageUrl || defaultImageUrl,
-                                            alt: policy.title,
-                                            className: "w-12 h-12 object-cover rounded-full mb-4"
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-start gap-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex-shrink-0 h-10 w-10 rounded-lg bg-brand-50 dark:bg-brand-900/20 flex items-center justify-center text-brand-600 dark:text-brand-400",
+                                                    children: policy.imageUrl ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                        src: policy.imageUrl,
+                                                        alt: policy.title,
+                                                        className: "w-full h-full object-cover rounded-lg"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                        lineNumber: 489,
+                                                        columnNumber: 49
+                                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                        xmlns: "http://www.w3.org/2000/svg",
+                                                        width: "20",
+                                                        height: "20",
+                                                        viewBox: "0 0 24 24",
+                                                        fill: "none",
+                                                        stroke: "currentColor",
+                                                        strokeWidth: "2",
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                d: "M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 495,
+                                                                columnNumber: 227
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
+                                                                points: "14 2 14 8 20 8"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 495,
+                                                                columnNumber: 309
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                d: "M16 13H8"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 495,
+                                                                columnNumber: 345
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                d: "M16 17H8"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 495,
+                                                                columnNumber: 366
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                                d: "M10 9H8"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                                lineNumber: 495,
+                                                                columnNumber: 387
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                        lineNumber: 495,
+                                                        columnNumber: 49
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 487,
+                                                    columnNumber: 41
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex-1 min-w-0",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                            className: "text-base font-semibold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors truncate",
+                                                            children: policy.title
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                            lineNumber: 499,
+                                                            columnNumber: 45
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                            className: "text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2",
+                                                            children: "Click to view full policy"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                            lineNumber: 502,
+                                                            columnNumber: 45
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                    lineNumber: 498,
+                                                    columnNumber: 41
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 274,
+                                            lineNumber: 486,
                                             columnNumber: 37
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-bold text-gray-900 dark:text-white",
-                                            children: policy.title
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                xmlns: "http://www.w3.org/2000/svg",
+                                                width: "16",
+                                                height: "16",
+                                                viewBox: "0 0 24 24",
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                strokeWidth: "2",
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                className: "text-gray-400",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        d: "M7 7h10v10"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                        lineNumber: 508,
+                                                        columnNumber: 245
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        d: "M7 17 17 7"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                        lineNumber: 508,
+                                                        columnNumber: 268
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                                lineNumber: 508,
+                                                columnNumber: 41
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 279,
-                                            columnNumber: 37
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm text-gray-500 dark:text-gray-400",
-                                            children: "Click to view details"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 507,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, policy.id, true, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 481,
                                     columnNumber: 33
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 267,
+                            lineNumber: 479,
                             columnNumber: 25
                         }, this),
                         selectedCategory.policies.length > policiesPerPage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1278,7 +1752,7 @@ function HrPoliciesPage() {
                                     children: "Prev"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 292,
+                                    lineNumber: 517,
                                     columnNumber: 33
                                 }, this),
                                 [
@@ -1289,7 +1763,7 @@ function HrPoliciesPage() {
                                         children: idx + 1
                                     }, idx, false, {
                                         fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 527,
                                         columnNumber: 37
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1299,24 +1773,24 @@ function HrPoliciesPage() {
                                     children: "Next"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 311,
+                                    lineNumber: 536,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 291,
+                            lineNumber: 516,
                             columnNumber: 29
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                    lineNumber: 257,
+                    lineNumber: 452,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                lineNumber: 194,
+                lineNumber: 364,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Modal"], {
@@ -1331,14 +1805,14 @@ function HrPoliciesPage() {
                             children: selectedPolicy.title
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 340,
+                            lineNumber: 565,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-px w-full bg-gray-200 dark:bg-gray-700"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 343,
+                            lineNumber: 568,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1350,39 +1824,50 @@ function HrPoliciesPage() {
                                 className: "prose dark:prose-invert max-w-none"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                lineNumber: 347,
+                                lineNumber: 572,
                                 columnNumber: 33
                             }, this) : selectedPolicy.content
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 344,
+                            lineNumber: 569,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mt-6 flex justify-end",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: closeModal,
-                                className: "rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
-                                children: "Close"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                lineNumber: 353,
-                                columnNumber: 29
-                            }, this)
-                        }, void 0, false, {
+                            className: "mt-6 flex justify-between",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>openEditPolicyModal(selectedPolicy),
+                                    className: "text-sm font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300 underline",
+                                    children: "Edit Policy"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 578,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: closeModal,
+                                    className: "rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
+                                    children: "Close"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 584,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 352,
+                            lineNumber: 577,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                    lineNumber: 339,
+                    lineNumber: 564,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                lineNumber: 337,
+                lineNumber: 562,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Modal"], {
@@ -1394,10 +1879,10 @@ function HrPoliciesPage() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "text-xl font-bold text-gray-900 dark:text-white",
-                            children: "Create New Policy"
+                            children: editingPolicy ? "Edit Policy" : "Create New Policy"
                         }, void 0, false, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 367,
+                            lineNumber: 598,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1407,7 +1892,7 @@ function HrPoliciesPage() {
                                     children: "Policy Title"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 370,
+                                    lineNumber: 603,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1418,13 +1903,13 @@ function HrPoliciesPage() {
                                     onChange: (e)=>setNewPolicyTitle(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 373,
+                                    lineNumber: 606,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 369,
+                            lineNumber: 602,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1434,7 +1919,7 @@ function HrPoliciesPage() {
                                     children: "Category"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 383,
+                                    lineNumber: 616,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -1446,18 +1931,18 @@ function HrPoliciesPage() {
                                             children: cat.name
                                         }, cat.id, false, {
                                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                            lineNumber: 392,
+                                            lineNumber: 625,
                                             columnNumber: 33
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 386,
+                                    lineNumber: 619,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 382,
+                            lineNumber: 615,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1467,7 +1952,7 @@ function HrPoliciesPage() {
                                     children: "Policy Content"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 398,
+                                    lineNumber: 631,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$editor$2f$TiptapEditor$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1475,13 +1960,13 @@ function HrPoliciesPage() {
                                     onChange: setNewPolicyContent
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 401,
+                                    lineNumber: 634,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 397,
+                            lineNumber: 630,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1493,39 +1978,173 @@ function HrPoliciesPage() {
                                     children: "Cancel"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 405,
+                                    lineNumber: 638,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: handleCreatePolicy,
+                                    onClick: handleSavePolicy,
                                     className: "px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700",
-                                    children: "Create Policy"
+                                    children: editingPolicy ? "Save Changes" : "Create Policy"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                                    lineNumber: 411,
+                                    lineNumber: 644,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                            lineNumber: 404,
+                            lineNumber: 637,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                    lineNumber: 366,
+                    lineNumber: 597,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-                lineNumber: 365,
+                lineNumber: 596,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$modal$2f$index$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Modal"], {
+                isOpen: isCreateCategoryModalOpen,
+                onClose: ()=>setIsCreateCategoryModalOpen(false),
+                className: "max-w-md p-6",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "space-y-4",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-xl font-bold text-gray-900 dark:text-white",
+                            children: editingCategory ? "Edit Category" : "Create New Category"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                            lineNumber: 657,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1",
+                                    children: "Category Name"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 662,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                    type: "text",
+                                    className: "w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500",
+                                    placeholder: "e.g., Finance Policies",
+                                    value: newCategoryName,
+                                    onChange: (e)=>setNewCategoryName(e.target.value)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 665,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                            lineNumber: 661,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1",
+                                    children: "Description"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 675,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                    className: "w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500",
+                                    placeholder: "Category description...",
+                                    rows: 3,
+                                    value: newCategoryDescription,
+                                    onChange: (e)=>setNewCategoryDescription(e.target.value)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 678,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                            lineNumber: 674,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: "block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1",
+                                    children: "Image URL"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 688,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                    type: "text",
+                                    className: "w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500",
+                                    placeholder: "https://...",
+                                    value: newCategoryImageUrl,
+                                    onChange: (e)=>setNewCategoryImageUrl(e.target.value)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 691,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                            lineNumber: 687,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex justify-end gap-3 mt-6",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setIsCreateCategoryModalOpen(false),
+                                    className: "px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800",
+                                    children: "Cancel"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 701,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleSaveCategory,
+                                    className: "px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700",
+                                    children: editingCategory ? "Save Changes" : "Create Category"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                                    lineNumber: 707,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                            lineNumber: 700,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                    lineNumber: 656,
+                    columnNumber: 17
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
+                lineNumber: 655,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(admin)/(others-pages)/hr-policies/page.tsx",
-        lineNumber: 183,
+        lineNumber: 345,
         columnNumber: 9
     }, this);
 }
