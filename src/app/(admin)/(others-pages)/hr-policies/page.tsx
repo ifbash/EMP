@@ -1,12 +1,13 @@
-"use client";
+"use client"
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import { Modal } from "@/components/ui/modal";
 import React, { useState } from "react";
+import TiptapEditor from "@/components/ui/editor/TiptapEditor";
 
 interface Policy {
     id: string;
     title: string;
-    content: React.ReactNode;
+    content: React.ReactNode | string; // Allow string for HTML content
     imageUrl?: string;
 }
 
@@ -21,8 +22,8 @@ interface Category {
 const defaultImageUrl =
     "https://www.vecteezy.com/free-vector/policy-icon";
 
-// Sample data (replace or extend as needed)
-const hrCategories: Category[] = [
+// Sample data (replace or extend as needed)                                                                                                                                                                                                                    
+const initialCategories: Category[] = [
     {
         id: "leave",
         name: "Leave & Time Off",
@@ -98,10 +99,18 @@ const hrCategories: Category[] = [
 ];
 
 export default function HrPoliciesPage() {
+    const [categories, setCategories] = useState<Category[]>(initialCategories);
     const [selectedCategory, setSelectedCategory] = useState<Category | null>(
         null
     );
     const [selectedPolicy, setSelectedPolicy] = useState<Policy | null>(null);
+
+    // Create Policy State
+    const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+    const [newPolicyTitle, setNewPolicyTitle] = useState("");
+    const [newPolicyCategory, setNewPolicyCategory] = useState(initialCategories[0].id);
+    const [newPolicyContent, setNewPolicyContent] = useState("<p>Start writing your policy...</p>");
+
 
     // Pagination states
     const [categoryPage, setCategoryPage] = useState(1);
@@ -109,9 +118,9 @@ export default function HrPoliciesPage() {
     const [policyPage, setPolicyPage] = useState(1);
     const policiesPerPage = 6;
 
-    const totalCategoryPages = Math.ceil(hrCategories.length / categoriesPerPage);
+    const totalCategoryPages = Math.ceil(categories.length / categoriesPerPage);
 
-    const displayedCategories = hrCategories.slice(
+    const displayedCategories = categories.slice(
         (categoryPage - 1) * categoriesPerPage,
         categoryPage * categoriesPerPage
     );
@@ -138,9 +147,49 @@ export default function HrPoliciesPage() {
 
     const closeModal = () => setSelectedPolicy(null);
 
+    const handleCreatePolicy = () => {
+        if (!newPolicyTitle || !newPolicyContent) return;
+
+        const updatedCategories = categories.map(cat => {
+            if (cat.id === newPolicyCategory) {
+                return {
+                    ...cat,
+                    policies: [
+                        ...cat.policies,
+                        {
+                            id: newPolicyTitle.toLowerCase().replace(/\s+/g, '-'),
+                            title: newPolicyTitle,
+                            content: <div dangerouslySetInnerHTML={{ __html: newPolicyContent }} className="prose dark:prose-invert max-w-none" />,
+                        }
+                    ]
+                };
+            }
+            return cat;
+        });
+
+        setCategories(updatedCategories);
+        setIsCreateModalOpen(false);
+        // Reset form
+        setNewPolicyTitle("");
+        setNewPolicyContent("<p>Start writing your policy...</p>");
+        // If the user is currently viewing the category, update it essentially
+        if (selectedCategory && selectedCategory.id === newPolicyCategory) {
+            const updatedSelected = updatedCategories.find(c => c.id === selectedCategory.id);
+            if (updatedSelected) setSelectedCategory(updatedSelected);
+        }
+    };
+
     return (
         <div>
-            <PageBreadcrumb pageTitle="HR Policies" />
+            <div className="flex justify-between items-center mb-6">
+                <PageBreadcrumb pageTitle="HR Policies" />
+                <button
+                    onClick={() => setIsCreateModalOpen(true)}
+                    className="bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                    + Create Policy
+                </button>
+            </div>
 
             <div className="min-h-screen rounded-2xl border border-gray-200 bg-white px-5 py-7 dark:border-gray-800 dark:bg-white/[0.03] xl:px-10 xl:py-12">
                 {/* Categories */}
@@ -181,16 +230,14 @@ export default function HrPoliciesPage() {
                                 >
                                     Prev
                                 </button>
-                                {[...Array(totalCategoryPages)].map((_, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={() => setCategoryPage(idx + 1)}
-                                        className={`px-3 py-1 border rounded ${categoryPage === idx + 1 ? "bg-brand-500 text-white" : ""
-                                            }`}
-                                    >
-                                        {idx + 1}
-                                    </button>
-                                ))}
+                                <button
+                                    onClick={() => setCategoryPage(Math.max(categoryPage - 1, 1))}
+                                    className="px-3 py-1 border rounded"
+                                    disabled={categoryPage === 1}
+                                >
+                                    1
+                                </button>
+
                                 <button
                                     onClick={() =>
                                         setCategoryPage(
@@ -294,7 +341,14 @@ export default function HrPoliciesPage() {
                             {selectedPolicy.title}
                         </h2>
                         <div className="h-px w-full bg-gray-200 dark:bg-gray-700" />
-                        <div className="text-gray-600 dark:text-gray-300">{selectedPolicy.content}</div>
+                        <div className="text-gray-600 dark:text-gray-300">
+                            {/* Render helper for different content types */}
+                            {typeof selectedPolicy.content === 'string' ? (
+                                <div dangerouslySetInnerHTML={{ __html: selectedPolicy.content }} className="prose dark:prose-invert max-w-none" />
+                            ) : (
+                                selectedPolicy.content
+                            )}
+                        </div>
                         <div className="mt-6 flex justify-end">
                             <button
                                 onClick={closeModal}
@@ -305,6 +359,63 @@ export default function HrPoliciesPage() {
                         </div>
                     </div>
                 )}
+            </Modal>
+
+            {/* Create Policy Modal */}
+            <Modal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} className="max-w-4xl p-6">
+                <div className="space-y-4">
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">Create New Policy</h2>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Policy Title
+                        </label>
+                        <input
+                            type="text"
+                            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                            placeholder="e.g., Remote Work Policy"
+                            value={newPolicyTitle}
+                            onChange={(e) => setNewPolicyTitle(e.target.value)}
+                        />
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Category
+                        </label>
+                        <select
+                            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                            value={newPolicyCategory}
+                            onChange={(e) => setNewPolicyCategory(e.target.value)}
+                        >
+                            {categories.map(cat => (
+                                <option key={cat.id} value={cat.id}>{cat.name}</option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                            Policy Content
+                        </label>
+                        <TiptapEditor content={newPolicyContent} onChange={setNewPolicyContent} />
+                    </div>
+
+                    <div className="flex justify-end gap-3 mt-6">
+                        <button
+                            onClick={() => setIsCreateModalOpen(false)}
+                            className="px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            onClick={handleCreatePolicy}
+                            className="px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700"
+                        >
+                            Create Policy
+                        </button>
+                    </div>
+                </div>
             </Modal>
         </div>
     );
